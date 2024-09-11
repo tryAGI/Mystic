@@ -7,7 +7,7 @@ public partial class Tests
     {
         using var api = GetAuthenticatedApi();
 
-        var result = await api.Runs.SubmitRunV4RunsPostAsync(
+        var result = await api.Runs.SubmitRunAsync(
             pipeline: "black-forest-labs/flux-pro:v1",
             inputs: new List<RunInput>
             {

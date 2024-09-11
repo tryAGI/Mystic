@@ -11,4 +11,5 @@ autosdk generate openapi.yaml \
   --clientClassName MysticApi \
   --targetFramework net8.0 \
   --output Generated \
-  --exclude-deprecated-operations
+  --exclude-deprecated-operations \
+  --methodNamingConvention Summary

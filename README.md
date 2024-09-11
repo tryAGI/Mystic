@@ -17,6 +17,35 @@
 using Mystic;
 
 using var api = new MysticApi(apiKey);
+
+var result = await api.Runs.SubmitRunAsync(
+    pipeline: "black-forest-labs/flux-pro:v1",
+    inputs: new List<RunInput>
+    {
+        new()
+        {
+            Type = RunIOType.Dictionary,
+            Value = new RunInputValue
+            {
+                AdditionalProperties = new Dictionary<string, object>
+                {
+                    ["prompt"] = "a female, european, young adult, fit body, wavy acid orange hair, wearing open swimsuit, sea in the background.",
+                    ["width"] = 1024,
+                    ["height"] = 1024,
+                    ["variant"] = "flux.1-pro",
+                    ["steps"] = 25,
+                    ["prompt_upsampling"] = false,
+                    ["seed"] = Random.Shared.Next(0, 1000000),
+                    ["guidance"] = 3.5,
+                    ["safety_tolerance"] = 5,
+                    ["interval"] = 3,
+                }
+            },
+        },
+    }
+);
+
+Console.WriteLine($"Output: {new Uri(result.Outputs![0].File!.Url!)}");
 ```
 
 ## Support
