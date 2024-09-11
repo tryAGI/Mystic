@@ -1,8 +1,8 @@
-dotnet tool install --global openapigenerator.cli --prerelease
+dotnet tool install --global autosdk.cli --prerelease
 
-oag init \
-  SolutionName \
-  SomeApi \
-  https://raw.githubusercontent.com/api/openapi.json \
-  CompanyName \
+autosdk init \
+  Mystic \
+  MysticApi \
+  https://www.mystic.ai/openapi.json \
+  tryAGI \
   --output .
