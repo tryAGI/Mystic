@@ -1673,6 +1673,37 @@ paths:
       security:
         - HTTPBearer: [ ]
         - APIKeyCookie: [ ]
+  /v4/metrics/pipelines-cost:
+    get:
+      tags:
+        - Metrics
+      summary: Get Pipelines Cost Breakdown
+      description: "Retrieve a cost estimate for each pipeline over a billing cycle.\nDefaults to current billing cycle with query parameter billing_cycle = 0.\nFor the previous billing cycle, use value billing_cycle = 1, and so on..\nNotes:\n    - Each computed cost is an estimate and may differ slightly from the\n    exact charge (e.g a pipeline whose accelerator has been patched).\n    - GPU low volume premium rates are encompassed in each cost estimate.\n    - Some pipelines are not included: those running on your own cloud (BYOC)\n    and externally hosted ones (e.g. black-forest-labs/flux-pro)."
+      operationId: get_pipelines_cost_breakdown_v4_metrics_pipelines_cost_get
+      parameters:
+        - name: billing_cycle
+          in: query
+          schema:
+            title: Billing Cycle
+            minimum: 0.0
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PipelineBillingBreakdown'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+        - HTTPBearer: [ ]
+        - APIKeyCookie: [ ]
   '/v4/logs/run/{run_id}':
     get:
       tags:
@@ -2539,6 +2570,41 @@ components:
         subscription_id:
           title: Subscription Id
           type: string
+      description: Base model for schemas.
+    BillingCostPerPipeline:
+      title: BillingCostPerPipeline
+      required:
+        - pipeline_id
+        - pipeline_name
+        - run_count
+        - total_compute_time_seconds
+        - first_run_at
+        - last_run_at
+      type: object
+      properties:
+        pipeline_id:
+          title: Pipeline Id
+          type: string
+        pipeline_name:
+          title: Pipeline Name
+          type: string
+        run_count:
+          title: Run Count
+          type: integer
+        total_compute_time_seconds:
+          title: Total Compute Time Seconds
+          type: integer
+        cost_estimate:
+          title: Cost Estimate
+          type: number
+        first_run_at:
+          title: First Run At
+          type: string
+          format: date-time
+        last_run_at:
+          title: Last Run At
+          type: string
+          format: date-time
       description: Base model for schemas.
     Body_create_gcp_service_account_v4_cloud_provider_gcp_service_accounts_post:
       title: Body_create_gcp_service_account_v4_cloud_provider_gcp_service_accounts_post
@@ -3514,6 +3580,28 @@ components:
           title: Scaling Config
           type: string
       additionalProperties: false
+      description: Base model for schemas.
+    PipelineBillingBreakdown:
+      title: PipelineBillingBreakdown
+      required:
+        - billing_start
+        - billing_end
+        - usages
+      type: object
+      properties:
+        billing_start:
+          title: Billing Start
+          type: string
+          format: date-time
+        billing_end:
+          title: Billing End
+          type: string
+          format: date-time
+        usages:
+          title: Usages
+          type: array
+          items:
+            $ref: '#/components/schemas/BillingCostPerPipeline'
       description: Base model for schemas.
     PipelineClusterConfig:
       title: PipelineClusterConfig
