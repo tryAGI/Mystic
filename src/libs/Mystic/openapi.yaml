@@ -1677,20 +1677,22 @@ paths:
     get:
       tags:
         - Metrics
-      summary: Get Pipelines Cost Breakdown
-      description: "Retrieve a cost estimate for each pipeline over a billing cycle.\nDefaults to current billing cycle with query parameter billing_cycle = 0.\nFor the previous billing cycle, use value billing_cycle = 1, and so on..\nNotes:\n    - Each computed cost is an estimate and may differ slightly from the\n    exact charge (e.g a pipeline whose accelerator has been patched).\n    - GPU low volume premium rates are encompassed in each cost estimate.\n    - Some pipelines are not included: those running on your own cloud (BYOC)\n    and externally hosted ones (e.g. black-forest-labs/flux-pro)."
+      summary: Retrieve pipeline cost estimates for a billing cycle
+      description: "Retrieve a cost estimate for each pipeline over a billing cycle.\nDefaults to the current billing cycle with `billing_cycle_offset=0`.\n\nNotes:\n    - Each computed cost is an estimate and may differ slightly from the exact\n    charge. For instance, if your billing cycle anchor or pipeline accelerator has\n    been updated.\n    - GPU low volume premium rates are encompassed in each cost estimate.\n    - Some pipelines are not included: those running on your own cloud (BYOC) and\n      externally hosted ones (e.g., black-forest-labs/flux-pro)."
       operationId: get_pipelines_cost_breakdown_v4_metrics_pipelines_cost_get
       parameters:
-        - name: billing_cycle
+        - name: billing_cycle_offset
           in: query
+          description: 'The number of months to offset the billing cycle. Defaults to 0 (current cycle). Use 1 for the previous cycle, 2 for two cycles ago, etc.'
           schema:
-            title: Billing Cycle
+            title: Billing Cycle Offset
             minimum: 0.0
             type: integer
+            description: 'The number of months to offset the billing cycle. Defaults to 0 (current cycle). Use 1 for the previous cycle, 2 for two cycles ago, etc.'
             default: 0
       responses:
         '200':
-          description: Successful Response
+          description: A breakdown of pipeline costs for the specified billing cycle.
           content:
             application/json:
               schema:

@@ -5,60 +5,61 @@ namespace Mystic
 {
     public partial class MetricsClient
     {
-        partial void PrepareGetPipelinesCostBreakdownArguments(
+        partial void PrepareRetrievePipelineCostEstimatesForABillingCycleArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int billingCycle);
-        partial void PrepareGetPipelinesCostBreakdownRequest(
+            ref int billingCycleOffset);
+        partial void PrepareRetrievePipelineCostEstimatesForABillingCycleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int billingCycle);
-        partial void ProcessGetPipelinesCostBreakdownResponse(
+            int billingCycleOffset);
+        partial void ProcessRetrievePipelineCostEstimatesForABillingCycleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetPipelinesCostBreakdownResponseContent(
+        partial void ProcessRetrievePipelineCostEstimatesForABillingCycleResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get Pipelines Cost Breakdown<br/>
+        /// Retrieve pipeline cost estimates for a billing cycle<br/>
         /// Retrieve a cost estimate for each pipeline over a billing cycle.<br/>
-        /// Defaults to current billing cycle with query parameter billing_cycle = 0.<br/>
-        /// For the previous billing cycle, use value billing_cycle = 1, and so on..<br/>
+        /// Defaults to the current billing cycle with `billing_cycle_offset=0`.<br/>
         /// Notes:<br/>
-        ///     - Each computed cost is an estimate and may differ slightly from the<br/>
-        ///     exact charge (e.g a pipeline whose accelerator has been patched).<br/>
+        ///     - Each computed cost is an estimate and may differ slightly from the exact<br/>
+        ///     charge. For instance, if your billing cycle anchor or pipeline accelerator has<br/>
+        ///     been updated.<br/>
         ///     - GPU low volume premium rates are encompassed in each cost estimate.<br/>
-        ///     - Some pipelines are not included: those running on your own cloud (BYOC)<br/>
-        ///     and externally hosted ones (e.g. black-forest-labs/flux-pro).
+        ///     - Some pipelines are not included: those running on your own cloud (BYOC) and<br/>
+        ///       externally hosted ones (e.g., black-forest-labs/flux-pro).
         /// </summary>
-        /// <param name="billingCycle">
+        /// <param name="billingCycleOffset">
+        /// The number of months to offset the billing cycle. Defaults to 0 (current cycle). Use 1 for the previous cycle, 2 for two cycles ago, etc.<br/>
         /// Default Value: 0
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.PipelineBillingBreakdown> GetPipelinesCostBreakdownAsync(
-            int billingCycle = 0,
+        public async global::System.Threading.Tasks.Task<global::Mystic.PipelineBillingBreakdown> RetrievePipelineCostEstimatesForABillingCycleAsync(
+            int billingCycleOffset = 0,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: _httpClient);
-            PrepareGetPipelinesCostBreakdownArguments(
+            PrepareRetrievePipelineCostEstimatesForABillingCycleArguments(
                 httpClient: _httpClient,
-                billingCycle: ref billingCycle);
+                billingCycleOffset: ref billingCycleOffset);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/v4/metrics/pipelines-cost?billing_cycle={billingCycle}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/v4/metrics/pipelines-cost?billing_cycle_offset={billingCycleOffset}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
                 request: httpRequest);
-            PrepareGetPipelinesCostBreakdownRequest(
+            PrepareRetrievePipelineCostEstimatesForABillingCycleRequest(
                 httpClient: _httpClient,
                 httpRequestMessage: httpRequest,
-                billingCycle: billingCycle);
+                billingCycleOffset: billingCycleOffset);
 
             using var response = await _httpClient.SendAsync(
                 request: httpRequest,
@@ -68,7 +69,7 @@ namespace Mystic
             ProcessResponse(
                 client: _httpClient,
                 response: response);
-            ProcessGetPipelinesCostBreakdownResponse(
+            ProcessRetrievePipelineCostEstimatesForABillingCycleResponse(
                 httpClient: _httpClient,
                 httpResponseMessage: response);
 
@@ -78,7 +79,7 @@ namespace Mystic
                 client: _httpClient,
                 response: response,
                 content: ref __content);
-            ProcessGetPipelinesCostBreakdownResponseContent(
+            ProcessRetrievePipelineCostEstimatesForABillingCycleResponseContent(
                 httpClient: _httpClient,
                 httpResponseMessage: response,
                 content: ref __content);
