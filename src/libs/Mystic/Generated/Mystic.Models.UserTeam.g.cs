@@ -34,7 +34,7 @@ namespace Mystic
         /// Defines various account tiers with different access levels and permissions.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("account_tier")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::AutoSDK.JsonConverters.AccountTierJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mystic.JsonConverters.AccountTierJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Mystic.AccountTier AccountTier { get; set; }
 

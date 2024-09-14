@@ -33,7 +33,7 @@ namespace Mystic
         /// An enumeration.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::AutoSDK.JsonConverters.PipelineStateJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mystic.JsonConverters.PipelineStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Mystic.PipelineState State { get; set; }
 

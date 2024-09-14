@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace AutoSDK.JsonConverters
+namespace Mystic.JsonConverters
 {
     /// <inheritdoc />
     public sealed class ContainerRunErrorTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Mystic.ContainerRunErrorType?>

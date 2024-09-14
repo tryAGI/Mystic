@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace AutoSDK.JsonConverters
+namespace Mystic.JsonConverters
 {
     /// <inheritdoc />
     public class AnyOfJsonConverter<T1, T2> : global::System.Text.Json.Serialization.JsonConverter<global::Mystic.AnyOf<T1, T2>>
