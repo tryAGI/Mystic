@@ -82,7 +82,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.AuthGcpV4CloudProviderGcpAuthGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse), JsonSerializerContext) as global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

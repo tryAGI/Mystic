@@ -118,7 +118,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.TopPipelinesUsageV4MetricsTopPipelinesUsageGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.TopPipelinesUsageV4MetricsTopPipelinesUsageGetResponse), JsonSerializerContext) as global::Mystic.TopPipelinesUsageV4MetricsTopPipelinesUsageGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

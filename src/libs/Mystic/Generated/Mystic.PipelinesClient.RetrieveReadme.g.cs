@@ -95,7 +95,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.GetReadme) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.GetReadme), JsonSerializerContext) as global::Mystic.GetReadme ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

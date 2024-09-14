@@ -16,96 +16,155 @@ namespace Mystic
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::Mystic.SourceGenerationContext.Default;
+
 
         /// <summary>
         /// 
         /// </summary>
-        public PipelinesClient Pipelines => new PipelinesClient(_httpClient);
+        public PipelinesClient Pipelines => new PipelinesClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public UsersClient Users => new UsersClient(_httpClient);
+        public UsersClient Users => new UsersClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public TokensClient Tokens => new TokensClient(_httpClient);
+        public TokensClient Tokens => new TokensClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public RunsClient Runs => new RunsClient(_httpClient);
+        public RunsClient Runs => new RunsClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public BillingClient Billing => new BillingClient(_httpClient);
+        public BillingClient Billing => new BillingClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public PointersClient Pointers => new PointersClient(_httpClient);
+        public PointersClient Pointers => new PointersClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public PipelineFamiliesClient PipelineFamilies => new PipelineFamiliesClient(_httpClient);
+        public PipelineFamiliesClient PipelineFamilies => new PipelineFamiliesClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public FilesClient Files => new FilesClient(_httpClient);
+        public FilesClient Files => new FilesClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public MetricsClient Metrics => new MetricsClient(_httpClient);
+        public MetricsClient Metrics => new MetricsClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public LogsClient Logs => new LogsClient(_httpClient);
+        public LogsClient Logs => new LogsClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public CloudClient Cloud => new CloudClient(_httpClient);
+        public CloudClient Cloud => new CloudClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public CredentialsClient Credentials => new CredentialsClient(_httpClient);
+        public CredentialsClient Credentials => new CredentialsClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public GCPClient GCP => new GCPClient(_httpClient);
+        public GCPClient GCP => new GCPClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public AWSClient AWS => new AWSClient(_httpClient);
+        public AWSClient AWS => new AWSClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public AzureClient Azure => new AzureClient(_httpClient);
+        public AzureClient Azure => new AzureClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public ClusterClient Cluster => new ClusterClient(_httpClient);
+        public ClusterClient Cluster => new ClusterClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public ResourcesClient Resources => new ResourcesClient(_httpClient);
+        public ResourcesClient Resources => new ResourcesClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// 
         /// </summary>
-        public ScalingConfigurationsClient ScalingConfigurations => new ScalingConfigurationsClient(_httpClient);
+        public ScalingConfigurationsClient ScalingConfigurations => new ScalingConfigurationsClient(_httpClient)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
 
         /// <summary>
         /// Creates a new instance of the MysticApi.
@@ -116,8 +175,7 @@ namespace Mystic
         /// <param name="baseUri"></param> 
         public MysticApi(
             global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null 
-            )
+            global::System.Uri? baseUri = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
