@@ -12,7 +12,7 @@ namespace Mystic
         /// An enumeration.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::AutoSDK.JsonConverters.ContainerRunErrorTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mystic.JsonConverters.ContainerRunErrorTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Mystic.ContainerRunErrorType Type { get; set; }
 

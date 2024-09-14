@@ -58,7 +58,7 @@ namespace Mystic
         /// An enumeration.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::AutoSDK.JsonConverters.RunStateJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mystic.JsonConverters.RunStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Mystic.RunState State { get; set; }
 

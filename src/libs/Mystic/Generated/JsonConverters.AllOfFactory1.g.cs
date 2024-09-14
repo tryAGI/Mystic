@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace AutoSDK.JsonConverters
+namespace Mystic.JsonConverters
 {
     /// <inheritdoc />
     public sealed class AllOfJsonConverterFactory1 : global::System.Text.Json.Serialization.JsonConverterFactory
