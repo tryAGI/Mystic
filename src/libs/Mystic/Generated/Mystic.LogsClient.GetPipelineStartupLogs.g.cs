@@ -95,7 +95,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.GetPipelineStartupLogsV4LogsPipelineStartupPipelineIdOrPointerGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.GetPipelineStartupLogsV4LogsPipelineStartupPipelineIdOrPointerGetResponse), JsonSerializerContext) as global::Mystic.GetPipelineStartupLogsV4LogsPipelineStartupPipelineIdOrPointerGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

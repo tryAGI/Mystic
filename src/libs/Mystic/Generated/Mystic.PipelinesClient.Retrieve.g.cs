@@ -115,7 +115,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.AppSchemasPipelineGetDetailed) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AppSchemasPipelineGetDetailed), JsonSerializerContext) as global::Mystic.AppSchemasPipelineGetDetailed ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

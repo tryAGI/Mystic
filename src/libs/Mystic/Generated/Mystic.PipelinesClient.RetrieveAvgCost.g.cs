@@ -95,7 +95,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.RetrieveAvgCostV4PipelinesPipelineIdAvgCostGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.RetrieveAvgCostV4PipelinesPipelineIdAvgCostGetResponse), JsonSerializerContext) as global::Mystic.RetrieveAvgCostV4PipelinesPipelineIdAvgCostGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

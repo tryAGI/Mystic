@@ -83,7 +83,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.RetrieveV4FilesFileIdGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.RetrieveV4FilesFileIdGetResponse), JsonSerializerContext) as global::Mystic.RetrieveV4FilesFileIdGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

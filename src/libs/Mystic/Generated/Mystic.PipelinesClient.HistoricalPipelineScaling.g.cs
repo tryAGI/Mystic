@@ -120,7 +120,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse), JsonSerializerContext) as global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

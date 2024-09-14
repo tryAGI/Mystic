@@ -83,7 +83,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.AppSchemasRunGetDetailed) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AppSchemasRunGetDetailed), JsonSerializerContext) as global::Mystic.AppSchemasRunGetDetailed ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

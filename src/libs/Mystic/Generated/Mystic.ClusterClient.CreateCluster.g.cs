@@ -76,7 +76,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.CreateClusterV4ClustersPostResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.CreateClusterV4ClustersPostResponse), JsonSerializerContext) as global::Mystic.CreateClusterV4ClustersPostResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

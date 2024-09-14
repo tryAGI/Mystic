@@ -76,7 +76,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.GetUpcomingInvoice) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.GetUpcomingInvoice), JsonSerializerContext) as global::Mystic.GetUpcomingInvoice ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

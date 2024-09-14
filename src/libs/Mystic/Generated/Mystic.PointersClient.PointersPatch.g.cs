@@ -48,7 +48,7 @@ namespace Mystic
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/v4/pointers/{pointer}", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::Mystic.SourceGenerationContext.Default.PointerPatch);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -97,7 +97,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.PointerGet) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.PointerGet), JsonSerializerContext) as global::Mystic.PointerGet ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 

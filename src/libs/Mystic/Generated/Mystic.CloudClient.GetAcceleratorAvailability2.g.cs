@@ -76,7 +76,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.GetAcceleratorAvailabilityV4CloudProviderAwsAcceleratorAvailabilityGetResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.GetAcceleratorAvailabilityV4CloudProviderAwsAcceleratorAvailabilityGetResponse), JsonSerializerContext) as global::Mystic.GetAcceleratorAvailabilityV4CloudProviderAwsAcceleratorAvailabilityGetResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

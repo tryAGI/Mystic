@@ -94,7 +94,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.PipelineBillingBreakdown) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.PipelineBillingBreakdown), JsonSerializerContext) as global::Mystic.PipelineBillingBreakdown ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

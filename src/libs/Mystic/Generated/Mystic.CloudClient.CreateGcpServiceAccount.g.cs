@@ -102,7 +102,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::Mystic.SourceGenerationContext.Default.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse), JsonSerializerContext) as global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
