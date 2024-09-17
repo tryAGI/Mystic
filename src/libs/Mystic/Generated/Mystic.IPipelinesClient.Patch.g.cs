@@ -47,7 +47,7 @@ namespace Mystic
             string pipelineId,
             string? pointer = default,
             string? pipelineIdOrPointer = default,
-            bool @public = default,
+            bool? @public = default,
             string? description = default,
             string? websiteUrl = default,
             string? repositoryUrl = default,

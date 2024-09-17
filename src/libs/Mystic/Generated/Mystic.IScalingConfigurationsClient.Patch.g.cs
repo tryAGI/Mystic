@@ -34,8 +34,8 @@ namespace Mystic
             string name,
             global::Mystic.ScalingConfigType? type = default,
             global::Mystic.ScalingConfigPatchArgs? args = default,
-            int minimumNodes = default,
-            int maximumNodes = default,
+            int? minimumNodes = default,
+            int? maximumNodes = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

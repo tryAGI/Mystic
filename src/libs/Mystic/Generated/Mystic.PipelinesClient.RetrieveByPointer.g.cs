@@ -8,16 +8,16 @@ namespace Mystic
         partial void PrepareRetrieveByPointerArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string pointer,
-            ref bool includePointers,
-            ref bool includeExtras,
+            ref bool? includePointers,
+            ref bool? includeExtras,
             ref string? pipelineId,
             ref string? pipelineIdOrPointer);
         partial void PrepareRetrieveByPointerRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string pointer,
-            bool includePointers,
-            bool includeExtras,
+            bool? includePointers,
+            bool? includeExtras,
             string? pipelineId,
             string? pipelineIdOrPointer);
         partial void ProcessRetrieveByPointerResponse(
@@ -50,8 +50,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.AppSchemasPipelineGetDetailed> RetrieveByPointerAsync(
             string pointer,
-            bool includePointers = false,
-            bool includeExtras = false,
+            bool? includePointers = false,
+            bool? includeExtras = false,
             string? pipelineId = default,
             string? pipelineIdOrPointer = default,
             global::System.Threading.CancellationToken cancellationToken = default)

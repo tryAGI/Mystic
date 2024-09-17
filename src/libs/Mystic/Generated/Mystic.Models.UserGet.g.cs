@@ -42,7 +42,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("show_tutorial")]
-        public bool ShowTutorial { get; set; }
+        public bool? ShowTutorial { get; set; }
 
         /// <summary>
         /// 

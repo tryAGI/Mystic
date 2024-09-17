@@ -8,15 +8,15 @@ namespace Mystic
         partial void PrepareUsedPipelinesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? search,
-            ref int skip,
-            ref int limit,
+            ref int? skip,
+            ref int? limit,
             ref string? orderBy);
         partial void PrepareUsedPipelinesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? search,
-            int skip,
-            int limit,
+            int? skip,
+            int? limit,
             string? orderBy);
         partial void ProcessUsedPipelinesResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -44,8 +44,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.PaginatedPipelineMetrics> UsedPipelinesAsync(
             string? search = default,
-            int skip = 0,
-            int limit = 20,
+            int? skip = 0,
+            int? limit = 20,
             string? orderBy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -12,7 +12,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("public")]
-        public bool Public { get; set; }
+        public bool? Public { get; set; }
 
         /// <summary>
         /// 

@@ -40,7 +40,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost_estimate")]
-        public double CostEstimate { get; set; }
+        public double? CostEstimate { get; set; }
 
         /// <summary>
         /// 

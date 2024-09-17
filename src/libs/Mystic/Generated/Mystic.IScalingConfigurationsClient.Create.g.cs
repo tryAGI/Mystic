@@ -35,8 +35,8 @@ namespace Mystic
         global::System.Threading.Tasks.Task<global::Mystic.ScalingConfigGet> CreateAsync(
             string name,
             global::Mystic.ScalingConfigCreateArgs args,
-            int minimumNodes = 0,
-            int maximumNodes = 100,
+            int? minimumNodes = 0,
+            int? maximumNodes = 100,
             global::Mystic.ScalingConfigType type = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

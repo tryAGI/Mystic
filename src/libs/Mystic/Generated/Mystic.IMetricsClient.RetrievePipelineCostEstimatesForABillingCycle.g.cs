@@ -23,7 +23,7 @@ namespace Mystic
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PipelineBillingBreakdown> RetrievePipelineCostEstimatesForABillingCycleAsync(
-            int billingCycleOffset = 0,
+            int? billingCycleOffset = 0,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
