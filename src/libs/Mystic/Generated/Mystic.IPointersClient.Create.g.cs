@@ -27,7 +27,7 @@ namespace Mystic
         global::System.Threading.Tasks.Task<global::Mystic.PointerGet> CreateAsync(
             string pointerOrPipelineId,
             string pointer,
-            bool locked = default,
+            bool? locked = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

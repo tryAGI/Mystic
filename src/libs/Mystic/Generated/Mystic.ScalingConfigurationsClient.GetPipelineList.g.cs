@@ -8,15 +8,15 @@ namespace Mystic
         partial void PrepareGetPipelineListArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            ref int skip,
-            ref int limit,
+            ref int? skip,
+            ref int? limit,
             ref string? orderBy);
         partial void PrepareGetPipelineListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            int skip,
-            int limit,
+            int? skip,
+            int? limit,
             string? orderBy);
         partial void ProcessGetPipelineListResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -43,8 +43,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.PaginatedGetLean> GetPipelineListAsync(
             string name,
-            int skip = 0,
-            int limit = 20,
+            int? skip = 0,
+            int? limit = 20,
             string? orderBy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -19,8 +19,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PaginatedClusterDeployedPipelineGet> ListPipelinesAsync(
             string clusterId,
-            int skip = 0,
-            int limit = 20,
+            int? skip = 0,
+            int? limit = 20,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

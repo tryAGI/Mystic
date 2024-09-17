@@ -8,17 +8,17 @@ namespace Mystic
         partial void PrepareIndexArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? pipelineId,
-            ref bool includePointers,
-            ref int skip,
-            ref int limit,
+            ref bool? includePointers,
+            ref int? skip,
+            ref int? limit,
             ref string? orderBy);
         partial void PrepareIndexRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? pipelineId,
-            bool includePointers,
-            int skip,
-            int limit,
+            bool? includePointers,
+            int? skip,
+            int? limit,
             string? orderBy);
         partial void ProcessIndexResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -57,9 +57,9 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.PaginatedRunGet> IndexAsync(
             string? pipelineId = default,
-            bool includePointers = false,
-            int skip = 0,
-            int limit = 20,
+            bool? includePointers = false,
+            int? skip = 0,
+            int? limit = 20,
             string? orderBy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

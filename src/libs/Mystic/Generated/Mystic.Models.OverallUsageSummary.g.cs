@@ -53,13 +53,13 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("successful_run_count_change")]
-        public double SuccessfulRunCountChange { get; set; }
+        public double? SuccessfulRunCountChange { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("failed_run_count_change")]
-        public double FailedRunCountChange { get; set; }
+        public double? FailedRunCountChange { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

@@ -29,7 +29,7 @@ namespace Mystic
         global::System.Threading.Tasks.Task<global::Mystic.PointerGet> PointersPatchAsync(
             string pointer,
             string? pointerOrPipelineId = default,
-            bool locked = default,
+            bool? locked = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -7,11 +7,11 @@ namespace Mystic
     {
         partial void PrepareRetrievePipelineCostEstimatesForABillingCycleArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int billingCycleOffset);
+            ref int? billingCycleOffset);
         partial void PrepareRetrievePipelineCostEstimatesForABillingCycleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int billingCycleOffset);
+            int? billingCycleOffset);
         partial void ProcessRetrievePipelineCostEstimatesForABillingCycleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -40,7 +40,7 @@ namespace Mystic
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.PipelineBillingBreakdown> RetrievePipelineCostEstimatesForABillingCycleAsync(
-            int billingCycleOffset = 0,
+            int? billingCycleOffset = 0,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

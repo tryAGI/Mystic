@@ -107,7 +107,7 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mystic.TokenGet> CreateAsync(
             string? name = default,
-            global::System.DateTime expiresAt = default,
+            global::System.DateTime? expiresAt = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::Mystic.TokenCreate

@@ -29,7 +29,7 @@ namespace Mystic
         global::System.Threading.Tasks.Task<global::Mystic.TokenGet> PatchAsync(
             string tokenId,
             string? name = default,
-            bool isEnabled = default,
+            bool? isEnabled = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

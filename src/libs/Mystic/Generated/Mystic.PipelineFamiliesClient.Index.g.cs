@@ -11,9 +11,9 @@ namespace Mystic
             ref string? teamId,
             ref global::Mystic.AllOf<global::Mystic.OrderBy?>? orderBy,
             ref string? search,
-            ref bool includeAllRun,
-            ref int skip,
-            ref int limit);
+            ref bool? includeAllRun,
+            ref int? skip,
+            ref int? limit);
         partial void PrepareIndexRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,9 +21,9 @@ namespace Mystic
             string? teamId,
             global::Mystic.AllOf<global::Mystic.OrderBy?>? orderBy,
             string? search,
-            bool includeAllRun,
-            int skip,
-            int limit);
+            bool? includeAllRun,
+            int? skip,
+            int? limit);
         partial void ProcessIndexResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -62,9 +62,9 @@ namespace Mystic
             string? teamId = default,
             global::Mystic.AllOf<global::Mystic.OrderBy?>? orderBy = default,
             string? search = default,
-            bool includeAllRun = false,
-            int skip = 0,
-            int limit = 20,
+            bool? includeAllRun = false,
+            int? skip = 0,
+            int? limit = 20,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

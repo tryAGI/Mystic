@@ -20,8 +20,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PaginatedGetLean> GetPipelineListAsync(
             string name,
-            int skip = 0,
-            int limit = 20,
+            int? skip = 0,
+            int? limit = 20,
             string? orderBy = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -32,9 +32,9 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PaginatedRunGet> IndexAsync(
             string? pipelineId = default,
-            bool includePointers = false,
-            int skip = 0,
-            int limit = 20,
+            bool? includePointers = false,
+            int? skip = 0,
+            int? limit = 20,
             string? orderBy = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

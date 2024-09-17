@@ -111,8 +111,8 @@ namespace Mystic
         public async global::System.Threading.Tasks.Task<global::Mystic.ClusterRunResult> SubmitRunAsync(
             string pipeline,
             global::System.Collections.Generic.IList<global::Mystic.RunInput> inputs,
-            bool asyncRun = false,
-            bool waitForResources = default,
+            bool? asyncRun = false,
+            bool? waitForResources = default,
             string? runId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

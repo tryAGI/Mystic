@@ -47,13 +47,13 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_run_at")]
-        public global::System.DateTime LastRunAt { get; set; }
+        public global::System.DateTime? LastRunAt { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_failed_at")]
-        public global::System.DateTime LastFailedAt { get; set; }
+        public global::System.DateTime? LastFailedAt { get; set; }
 
         /// <summary>
         /// 
