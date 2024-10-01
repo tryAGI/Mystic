@@ -15,7 +15,7 @@ namespace Mystic
         public const string BaseUrl = "https://www.mystic.ai";
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
-        private global::Mystic.EndPointAuthorization? _authorization;
+        private global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization> _authorizations;
 
         /// <summary>
         /// 
@@ -30,15 +30,15 @@ namespace Mystic
         /// </summary>
         /// <param name="httpClient"></param>
         /// <param name="baseUri"></param>
-        /// <param name="authorization"></param>
+        /// <param name="authorizations"></param>
         public TokensClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
-            global::Mystic.EndPointAuthorization? authorization = null)
+            global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>? authorizations = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
-            _authorization = authorization;
+            _authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>();
 
             Initialized(_httpClient);
         }
