@@ -15,7 +15,7 @@ namespace Mystic
         public const string BaseUrl = "https://www.mystic.ai";
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
-        private global::Mystic.EndPointAuthorization? _authorization;
+        private global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization> _authorizations;
 
         /// <summary>
         /// 
@@ -26,7 +26,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public PipelinesClient Pipelines => new PipelinesClient(_httpClient, authorization: _authorization)
+        public PipelinesClient Pipelines => new PipelinesClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -34,7 +34,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public UsersClient Users => new UsersClient(_httpClient, authorization: _authorization)
+        public UsersClient Users => new UsersClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -42,7 +42,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public TokensClient Tokens => new TokensClient(_httpClient, authorization: _authorization)
+        public TokensClient Tokens => new TokensClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -50,7 +50,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public RunsClient Runs => new RunsClient(_httpClient, authorization: _authorization)
+        public RunsClient Runs => new RunsClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -58,7 +58,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public BillingClient Billing => new BillingClient(_httpClient, authorization: _authorization)
+        public BillingClient Billing => new BillingClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -66,7 +66,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public PointersClient Pointers => new PointersClient(_httpClient, authorization: _authorization)
+        public PointersClient Pointers => new PointersClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -74,7 +74,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public PipelineFamiliesClient PipelineFamilies => new PipelineFamiliesClient(_httpClient, authorization: _authorization)
+        public PipelineFamiliesClient PipelineFamilies => new PipelineFamiliesClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -82,7 +82,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public FilesClient Files => new FilesClient(_httpClient, authorization: _authorization)
+        public FilesClient Files => new FilesClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -90,7 +90,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public MetricsClient Metrics => new MetricsClient(_httpClient, authorization: _authorization)
+        public MetricsClient Metrics => new MetricsClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -98,7 +98,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public LogsClient Logs => new LogsClient(_httpClient, authorization: _authorization)
+        public LogsClient Logs => new LogsClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -106,7 +106,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public CloudClient Cloud => new CloudClient(_httpClient, authorization: _authorization)
+        public CloudClient Cloud => new CloudClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -114,7 +114,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public CredentialsClient Credentials => new CredentialsClient(_httpClient, authorization: _authorization)
+        public CredentialsClient Credentials => new CredentialsClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -122,7 +122,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public GCPClient GCP => new GCPClient(_httpClient, authorization: _authorization)
+        public GCPClient GCP => new GCPClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -130,7 +130,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public AWSClient AWS => new AWSClient(_httpClient, authorization: _authorization)
+        public AWSClient AWS => new AWSClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -138,7 +138,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public AzureClient Azure => new AzureClient(_httpClient, authorization: _authorization)
+        public AzureClient Azure => new AzureClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -146,7 +146,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public ClusterClient Cluster => new ClusterClient(_httpClient, authorization: _authorization)
+        public ClusterClient Cluster => new ClusterClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -154,7 +154,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public ResourcesClient Resources => new ResourcesClient(_httpClient, authorization: _authorization)
+        public ResourcesClient Resources => new ResourcesClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -162,7 +162,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public ScalingConfigurationsClient ScalingConfigurations => new ScalingConfigurationsClient(_httpClient, authorization: _authorization)
+        public ScalingConfigurationsClient ScalingConfigurations => new ScalingConfigurationsClient(_httpClient, authorizations: _authorizations)
         {
             JsonSerializerContext = JsonSerializerContext,
         };
@@ -174,15 +174,15 @@ namespace Mystic
         /// </summary>
         /// <param name="httpClient"></param>
         /// <param name="baseUri"></param>
-        /// <param name="authorization"></param>
+        /// <param name="authorizations"></param>
         public MysticApi(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
-            global::Mystic.EndPointAuthorization? authorization = null)
+            global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>? authorizations = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
-            _authorization = authorization;
+            _authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>();
 
             Initialized(_httpClient);
         }
