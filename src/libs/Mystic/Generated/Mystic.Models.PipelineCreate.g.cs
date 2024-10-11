@@ -70,7 +70,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extras")]
-        public global::Mystic.PipelineCreateExtras? Extras { get; set; }
+        public object? Extras { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

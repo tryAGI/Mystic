@@ -83,7 +83,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extras")]
-        public global::Mystic.AppSchemasPipelineGetDetailedExtras? Extras { get; set; }
+        public object? Extras { get; set; }
 
         /// <summary>
         /// 

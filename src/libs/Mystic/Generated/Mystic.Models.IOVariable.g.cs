@@ -104,7 +104,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dict_schema")]
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariableDictSchemaItem>? DictSchema { get; set; }
+        public global::System.Collections.Generic.IList<object>? DictSchema { get; set; }
 
         /// <summary>
         /// 

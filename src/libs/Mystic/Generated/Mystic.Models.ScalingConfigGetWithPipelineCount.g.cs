@@ -39,7 +39,7 @@ namespace Mystic
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("args")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Mystic.ScalingConfigGetWithPipelineCountArgs Args { get; set; }
+        public required object Args { get; set; }
 
         /// <summary>
         /// 
