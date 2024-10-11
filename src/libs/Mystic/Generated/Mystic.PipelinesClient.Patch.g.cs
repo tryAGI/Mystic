@@ -174,7 +174,7 @@ namespace Mystic
             global::System.Collections.Generic.IList<global::Mystic.IOVariable>? inputVariables = default,
             global::System.Collections.Generic.IList<global::Mystic.IOVariable>? outputVariables = default,
             global::System.Collections.Generic.IList<global::Mystic.Accelerator>? accelerators = default,
-            global::Mystic.PatchExtras? extras = default,
+            object? extras = default,
             string? scalingConfig = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

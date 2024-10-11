@@ -40,7 +40,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extras")]
-        public global::Mystic.PipelineGetExtras? Extras { get; set; }
+        public object? Extras { get; set; }
 
         /// <summary>
         /// 

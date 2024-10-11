@@ -33,7 +33,7 @@ namespace Mystic
         global::System.Threading.Tasks.Task<global::Mystic.ScalingConfigGet> PatchAsync(
             string name,
             global::Mystic.ScalingConfigType? type = default,
-            global::Mystic.ScalingConfigPatchArgs? args = default,
+            object? args = default,
             int? minimumNodes = default,
             int? maximumNodes = default,
             global::System.Threading.CancellationToken cancellationToken = default);

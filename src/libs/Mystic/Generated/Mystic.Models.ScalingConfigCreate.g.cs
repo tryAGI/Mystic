@@ -39,7 +39,7 @@ namespace Mystic
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("args")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Mystic.ScalingConfigCreateArgs Args { get; set; }
+        public required object Args { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

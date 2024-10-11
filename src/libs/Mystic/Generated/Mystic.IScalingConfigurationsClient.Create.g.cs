@@ -34,7 +34,7 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.ScalingConfigGet> CreateAsync(
             string name,
-            global::Mystic.ScalingConfigCreateArgs args,
+            object args,
             int? minimumNodes = 0,
             int? maximumNodes = 100,
             global::Mystic.ScalingConfigType type = default,

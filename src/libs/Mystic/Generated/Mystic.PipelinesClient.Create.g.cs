@@ -141,7 +141,7 @@ namespace Mystic
             string? scalingConfig = default,
             string? description = default,
             string? readme = default,
-            global::Mystic.PipelineCreateExtras? extras = default,
+            object? extras = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::Mystic.PipelineCreate
