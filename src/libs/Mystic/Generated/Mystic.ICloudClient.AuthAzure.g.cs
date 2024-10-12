@@ -10,7 +10,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse> AuthAzureAsync(
+        global::System.Threading.Tasks.Task<string> AuthAzureAsync(
             global::Mystic.AzureAuthCreate request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -23,7 +23,7 @@ namespace Mystic
         /// <param name="subscriptionId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse> AuthAzureAsync(
+        global::System.Threading.Tasks.Task<string> AuthAzureAsync(
             string clientId,
             string clientSecret,
             string tenantId,

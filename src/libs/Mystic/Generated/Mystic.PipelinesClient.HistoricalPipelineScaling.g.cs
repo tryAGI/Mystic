@@ -47,7 +47,7 @@ namespace Mystic
         /// <param name="intervalValue"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse> HistoricalPipelineScalingAsync(
+        public async global::System.Threading.Tasks.Task<string> HistoricalPipelineScalingAsync(
             string pipelineId,
             global::System.DateTime start,
             global::System.DateTime end,
@@ -147,9 +147,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse), JsonSerializerContext) as global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
     }
 }

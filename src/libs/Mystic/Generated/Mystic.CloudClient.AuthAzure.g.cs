@@ -27,7 +27,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse> AuthAzureAsync(
+        public async global::System.Threading.Tasks.Task<string> AuthAzureAsync(
             global::Mystic.AzureAuthCreate request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -109,9 +109,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse), JsonSerializerContext) as global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -123,7 +121,7 @@ namespace Mystic
         /// <param name="subscriptionId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse> AuthAzureAsync(
+        public async global::System.Threading.Tasks.Task<string> AuthAzureAsync(
             string clientId,
             string clientSecret,
             string tenantId,

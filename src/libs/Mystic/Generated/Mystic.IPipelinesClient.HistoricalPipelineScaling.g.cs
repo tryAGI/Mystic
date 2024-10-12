@@ -18,7 +18,7 @@ namespace Mystic
         /// <param name="intervalValue"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse> HistoricalPipelineScalingAsync(
+        global::System.Threading.Tasks.Task<string> HistoricalPipelineScalingAsync(
             string pipelineId,
             global::System.DateTime start,
             global::System.DateTime end,

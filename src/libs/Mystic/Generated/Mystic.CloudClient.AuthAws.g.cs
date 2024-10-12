@@ -27,7 +27,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse> AuthAwsAsync(
+        public async global::System.Threading.Tasks.Task<string> AuthAwsAsync(
             global::Mystic.AWSAuthCreate request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -109,9 +109,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse), JsonSerializerContext) as global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -120,7 +118,7 @@ namespace Mystic
         /// <param name="roleArn"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse> AuthAwsAsync(
+        public async global::System.Threading.Tasks.Task<string> AuthAwsAsync(
             string roleArn,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

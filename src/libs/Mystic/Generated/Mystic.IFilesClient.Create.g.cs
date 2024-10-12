@@ -11,7 +11,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateV4FilesPostResponse> CreateAsync(
+        global::System.Threading.Tasks.Task<string> CreateAsync(
             global::Mystic.BodyCreateV4FilesPost request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -23,7 +23,7 @@ namespace Mystic
         /// <param name="pfilename"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateV4FilesPostResponse> CreateAsync(
+        global::System.Threading.Tasks.Task<string> CreateAsync(
             byte[] pfile,
             string pfilename,
             global::System.Threading.CancellationToken cancellationToken = default);

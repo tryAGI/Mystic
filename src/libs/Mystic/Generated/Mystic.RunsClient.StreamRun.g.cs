@@ -30,7 +30,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.StreamRunV4RunsStreamPostResponse> StreamRunAsync(
+        public async global::System.Threading.Tasks.Task<string> StreamRunAsync(
             global::Mystic.RunCreate request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -112,9 +112,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.StreamRunV4RunsStreamPostResponse), JsonSerializerContext) as global::Mystic.StreamRunV4RunsStreamPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -132,7 +130,7 @@ namespace Mystic
         /// <param name="runId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.StreamRunV4RunsStreamPostResponse> StreamRunAsync(
+        public async global::System.Threading.Tasks.Task<string> StreamRunAsync(
             string pipeline,
             global::System.Collections.Generic.IList<global::Mystic.RunInput> inputs,
             bool? asyncRun = false,

@@ -20,7 +20,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
-        public global::Mystic.RunOutputValue? Value { get; set; }
+        public object? Value { get; set; }
 
         /// <summary>
         /// Base model for schemas.

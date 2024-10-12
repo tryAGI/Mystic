@@ -10,7 +10,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse> CreateGcpServiceAccountAsync(
+        global::System.Threading.Tasks.Task<string> CreateGcpServiceAccountAsync(
             global::Mystic.BodyCreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPost request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -22,7 +22,7 @@ namespace Mystic
         /// <param name="serviceAccountFilename"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse> CreateGcpServiceAccountAsync(
+        global::System.Threading.Tasks.Task<string> CreateGcpServiceAccountAsync(
             byte[] serviceAccountFile,
             string serviceAccountFilename,
             string? credentialId = default,

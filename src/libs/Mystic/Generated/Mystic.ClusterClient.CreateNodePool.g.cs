@@ -30,7 +30,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse> CreateNodePoolAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateNodePoolAsync(
             string clusterId,
             global::Mystic.NodePoolCreate request,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -115,9 +115,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse), JsonSerializerContext) as global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -130,7 +128,7 @@ namespace Mystic
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse> CreateNodePoolAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateNodePoolAsync(
             string clusterId,
             global::System.Collections.Generic.IList<global::Mystic.Accelerator> accelerators,
             bool? spot = true,

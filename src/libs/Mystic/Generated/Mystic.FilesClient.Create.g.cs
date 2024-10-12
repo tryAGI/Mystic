@@ -28,7 +28,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateV4FilesPostResponse> CreateAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateAsync(
             global::Mystic.BodyCreateV4FilesPost request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -116,9 +116,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.CreateV4FilesPostResponse), JsonSerializerContext) as global::Mystic.CreateV4FilesPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -129,7 +127,7 @@ namespace Mystic
         /// <param name="pfilename"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateV4FilesPostResponse> CreateAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateAsync(
             byte[] pfile,
             string pfilename,
             global::System.Threading.CancellationToken cancellationToken = default)

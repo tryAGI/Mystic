@@ -27,7 +27,7 @@ namespace Mystic
         /// <param name="credentialId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse> AuthGcpAsync(
+        public async global::System.Threading.Tasks.Task<string> AuthGcpAsync(
             string? credentialId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -104,9 +104,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse), JsonSerializerContext) as global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
     }
 }

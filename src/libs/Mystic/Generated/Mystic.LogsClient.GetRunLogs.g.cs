@@ -28,7 +28,7 @@ namespace Mystic
         /// <param name="runId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.GetRunLogsV4LogsRunRunIdGetResponse> GetRunLogsAsync(
+        public async global::System.Threading.Tasks.Task<string> GetRunLogsAsync(
             string runId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -102,9 +102,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.GetRunLogsV4LogsRunRunIdGetResponse), JsonSerializerContext) as global::Mystic.GetRunLogsV4LogsRunRunIdGetResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
     }
 }

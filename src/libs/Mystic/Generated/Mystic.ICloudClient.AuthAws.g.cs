@@ -10,7 +10,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse> AuthAwsAsync(
+        global::System.Threading.Tasks.Task<string> AuthAwsAsync(
             global::Mystic.AWSAuthCreate request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -20,7 +20,7 @@ namespace Mystic
         /// <param name="roleArn"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse> AuthAwsAsync(
+        global::System.Threading.Tasks.Task<string> AuthAwsAsync(
             string roleArn,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
