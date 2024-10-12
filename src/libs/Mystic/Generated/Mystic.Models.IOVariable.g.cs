@@ -32,7 +32,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("examples")]
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariableExample>? Examples { get; set; }
+        public global::System.Collections.Generic.IList<object>? Examples { get; set; }
 
         /// <summary>
         /// 
@@ -98,7 +98,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("choices")]
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariableChoice>? Choices { get; set; }
+        public global::System.Collections.Generic.IList<object>? Choices { get; set; }
 
         /// <summary>
         /// 
@@ -110,7 +110,7 @@ namespace Mystic
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default")]
-        public global::Mystic.IOVariableDefault? Default { get; set; }
+        public object? Default { get; set; }
 
         /// <summary>
         /// 

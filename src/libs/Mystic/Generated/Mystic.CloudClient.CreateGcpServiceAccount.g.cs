@@ -27,7 +27,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse> CreateGcpServiceAccountAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateGcpServiceAccountAsync(
             global::Mystic.BodyCreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPost request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -121,9 +121,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse), JsonSerializerContext) as global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
 
         /// <summary>
@@ -134,7 +132,7 @@ namespace Mystic
         /// <param name="serviceAccountFilename"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse> CreateGcpServiceAccountAsync(
+        public async global::System.Threading.Tasks.Task<string> CreateGcpServiceAccountAsync(
             byte[] serviceAccountFile,
             string serviceAccountFilename,
             string? credentialId = default,

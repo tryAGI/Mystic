@@ -34,7 +34,7 @@ namespace Mystic
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Mystic.PaginatedAnyDataItem> Data { get; set; }
+        public required global::System.Collections.Generic.IList<object> Data { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

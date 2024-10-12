@@ -114,7 +114,7 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunInputValue? Type24 { get; set; }
+        public object? Type24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -126,482 +126,374 @@ namespace Mystic
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunOutputValue? Type27 { get; set; }
+        public global::Mystic.RunOutputFile? Type27 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunOutputFile? Type28 { get; set; }
+        public global::Mystic.ContainerRunError? Type28 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ContainerRunError? Type29 { get; set; }
+        public global::Mystic.ContainerRunErrorType? Type29 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ContainerRunErrorType? Type30 { get; set; }
+        public global::System.DateTimeOffset? Type30 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTimeOffset? Type31 { get; set; }
+        public global::Mystic.RunState? Type31 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunState? Type32 { get; set; }
+        public global::Mystic.CredentialGet? Type32 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.CredentialGet? Type33 { get; set; }
+        public bool? Type33 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public bool? Type34 { get; set; }
+        public global::Mystic.DurationUnit? Type34 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.DurationUnit? Type35 { get; set; }
+        public global::Mystic.GetDetailedPatch? Type35 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.GetDetailedPatch? Type36 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.IOVariable>? Type36 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariable>? Type37 { get; set; }
+        public global::Mystic.IOVariable? Type37 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.IOVariable? Type38 { get; set; }
+        public global::System.Collections.Generic.IList<object>? Type38 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariableExample>? Type39 { get; set; }
+        public global::Mystic.PipelineClusterGetLean? Type39 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.IOVariableExample? Type40 { get; set; }
+        public global::Mystic.PipelineContainerState? Type40 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.IOVariableChoice>? Type41 { get; set; }
+        public global::Mystic.PipelineState? Type41 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.IOVariableChoice? Type42 { get; set; }
+        public global::Mystic.GetLean? Type42 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<object>? Type43 { get; set; }
+        public global::Mystic.GetMetaAndPointers? Type43 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public object? Type44 { get; set; }
+        public global::Mystic.GetReadme? Type44 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.IOVariableDefault? Type45 { get; set; }
+        public global::Mystic.GetUpcomingInvoice? Type45 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineClusterGetLean? Type46 { get; set; }
+        public global::Mystic.HTTPValidationError? Type46 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineContainerState? Type47 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.ValidationError>? Type47 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineState? Type48 { get; set; }
+        public global::Mystic.ValidationError? Type48 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.GetLean? Type49 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.AnyOf<string, int?>>? Type49 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.GetMetaAndPointers? Type50 { get; set; }
+        public global::Mystic.AnyOf<string, int?>? Type50 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.GetReadme? Type51 { get; set; }
+        public global::Mystic.NodePool? Type51 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.GetUpcomingInvoice? Type52 { get; set; }
+        public global::Mystic.NodePoolAutoscaling? Type52 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.HTTPValidationError? Type53 { get; set; }
+        public global::Mystic.NodePoolCreate? Type53 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.ValidationError>? Type54 { get; set; }
+        public global::Mystic.OrderBy? Type54 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ValidationError? Type55 { get; set; }
+        public global::Mystic.OverallUsageSummary? Type55 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.AnyOf<string, int?>>? Type56 { get; set; }
+        public global::Mystic.PaginatedAny? Type56 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.AnyOf<string, int?>? Type57 { get; set; }
+        public global::Mystic.PaginatedClusterDeployedPipelineGet? Type57 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.NodePool? Type58 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.ClusterDeployedPipelineGet>? Type58 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.NodePoolAutoscaling? Type59 { get; set; }
+        public global::Mystic.PaginatedGetLean? Type59 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.NodePoolCreate? Type60 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.GetLean>? Type60 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.OrderBy? Type61 { get; set; }
+        public global::Mystic.PaginatedGetMetaAndPointers? Type61 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.OverallUsageSummary? Type62 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.GetMetaAndPointers>? Type62 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedAny? Type63 { get; set; }
+        public global::Mystic.PaginatedPipelineFamilyGet? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.PaginatedAnyDataItem>? Type64 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.PipelineFamilyGet>? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedAnyDataItem? Type65 { get; set; }
+        public global::Mystic.PipelineFamilyGet? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedClusterDeployedPipelineGet? Type66 { get; set; }
+        public global::Mystic.PaginatedPipelineGet? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.ClusterDeployedPipelineGet>? Type67 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.PipelineGet>? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedGetLean? Type68 { get; set; }
+        public global::Mystic.PipelineGet? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.GetLean>? Type69 { get; set; }
+        public global::Mystic.PaginatedPipelineMetrics? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedGetMetaAndPointers? Type70 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.PipelineMetrics>? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.GetMetaAndPointers>? Type71 { get; set; }
+        public global::Mystic.PipelineMetrics? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedPipelineFamilyGet? Type72 { get; set; }
+        public global::Mystic.PaginatedPointerGet? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.PipelineFamilyGet>? Type73 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.PointerGet>? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineFamilyGet? Type74 { get; set; }
+        public global::Mystic.PointerGet? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedPipelineGet? Type75 { get; set; }
+        public global::Mystic.PaginatedRunGet? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.PipelineGet>? Type76 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.RunGet>? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineGet? Type77 { get; set; }
+        public global::Mystic.RunGet? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedPipelineMetrics? Type78 { get; set; }
+        public global::Mystic.PaginatedScalingConfigGetWithPipelineCount? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.PipelineMetrics>? Type79 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.ScalingConfigGetWithPipelineCount>? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineMetrics? Type80 { get; set; }
+        public global::Mystic.ScalingConfigGetWithPipelineCount? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedPointerGet? Type81 { get; set; }
+        public global::Mystic.ScalingConfigType? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.PointerGet>? Type82 { get; set; }
+        public global::Mystic.PaginatedTeamInviteGet? Type82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PointerGet? Type83 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.TeamInviteGet>? Type83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedRunGet? Type84 { get; set; }
+        public global::Mystic.TeamInviteGet? Type84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.RunGet>? Type85 { get; set; }
+        public global::Mystic.PaginatedTokenGet? Type85 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunGet? Type86 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.TokenGet>? Type86 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedScalingConfigGetWithPipelineCount? Type87 { get; set; }
+        public global::Mystic.TokenGet? Type87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.ScalingConfigGetWithPipelineCount>? Type88 { get; set; }
+        public global::Mystic.Patch? Type88 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ScalingConfigGetWithPipelineCount? Type89 { get; set; }
+        public global::Mystic.PipelineBillingBreakdown? Type89 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ScalingConfigType? Type90 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.BillingCostPerPipeline>? Type90 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedTeamInviteGet? Type91 { get; set; }
+        public global::Mystic.PipelineCooldown? Type91 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.TeamInviteGet>? Type92 { get; set; }
+        public global::Mystic.PipelineCreate? Type92 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.TeamInviteGet? Type93 { get; set; }
+        public global::Mystic.PipelineScalingInfo? Type93 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PaginatedTokenGet? Type94 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, int>? Type94 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.TokenGet>? Type95 { get; set; }
+        public global::Mystic.PipelineWarmup? Type95 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.TokenGet? Type96 { get; set; }
+        public global::Mystic.PointerCreate? Type96 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.Patch? Type97 { get; set; }
+        public global::Mystic.PointerPatch? Type97 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineBillingBreakdown? Type98 { get; set; }
+        public global::Mystic.ProjectGet? Type98 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.BillingCostPerPipeline>? Type99 { get; set; }
+        public global::Mystic.RegionGet? Type99 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineCooldown? Type100 { get; set; }
+        public global::Mystic.ResourcePodInfo? Type100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineCreate? Type101 { get; set; }
+        public global::Mystic.RunCreate? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineScalingInfo? Type102 { get; set; }
+        public global::Mystic.ScalingConfigCreate? Type102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, int>? Type103 { get; set; }
+        public global::Mystic.ScalingConfigGet? Type103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PipelineWarmup? Type104 { get; set; }
+        public global::Mystic.ScalingConfigPatch? Type104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PointerCreate? Type105 { get; set; }
+        public global::Mystic.TokenCreate? Type105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.PointerPatch? Type106 { get; set; }
+        public global::Mystic.TokenPatch? Type106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ProjectGet? Type107 { get; set; }
+        public global::Mystic.UserGet? Type107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RegionGet? Type108 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.UserTeam>? Type108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ResourcePodInfo? Type109 { get; set; }
+        public global::Mystic.UserTeam? Type109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.RunCreate? Type110 { get; set; }
+        public global::Mystic.UserPublicGet? Type110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ScalingConfigCreate? Type111 { get; set; }
+        public global::Mystic.AppSchemasPipelineGetDetailed? Type111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ScalingConfigGet? Type112 { get; set; }
+        public global::Mystic.AppSchemasRunGetDetailed? Type112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.ScalingConfigPatch? Type113 { get; set; }
+        public global::Mystic.AllOf<global::Mystic.Accelerator?>? Type113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.TokenCreate? Type114 { get; set; }
+        public global::Mystic.AllOf<global::Mystic.OrderBy?>? Type114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.TokenPatch? Type115 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.CredentialGet>? Type115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.UserGet? Type116 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.ProjectGet>? Type116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.UserTeam>? Type117 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.RegionGet>? Type117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.UserTeam? Type118 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.ClusterGet>? Type118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mystic.UserPublicGet? Type119 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AppSchemasPipelineGetDetailed? Type120 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AppSchemasRunGetDetailed? Type121 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AllOf<global::Mystic.Accelerator?>? Type122 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AllOf<global::Mystic.OrderBy?>? Type123 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.RetrieveAvgCostV4PipelinesPipelineIdAvgCostGetResponse? Type124 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.HistoricalPipelineScalingV4PipelinesPipelineIdScalingHistoryGetResponse? Type125 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.StreamRunV4RunsStreamPostResponse? Type126 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.CreateV4FilesPostResponse? Type127 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.RetrieveV4FilesFileIdGetResponse? Type128 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.TopPipelinesUsageV4MetricsTopPipelinesUsageGetResponse? Type129 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.GetRunLogsV4LogsRunRunIdGetResponse? Type130 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.GetPipelineStartupLogsV4LogsPipelineStartupPipelineIdOrPointerGetResponse? Type131 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.CredentialGet>? Type132 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AuthGcpV4CloudProviderGcpAuthGetResponse? Type133 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.CallbackGcpV4CloudProviderGcpCallbackGetResponse? Type134 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.CreateGcpServiceAccountV4CloudProviderGcpServiceAccountsPostResponse? Type135 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.ProjectGet>? Type136 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.RegionGet>? Type137 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.GetAcceleratorAvailabilityV4CloudProviderGcpAcceleratorAvailabilityGetResponse? Type138 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AuthAwsV4CloudProviderAwsAuthPostResponse? Type139 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.GetAcceleratorAvailabilityV4CloudProviderAwsAcceleratorAvailabilityGetResponse? Type140 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.AuthAzureV4CloudProviderAzureAuthPostResponse? Type141 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.GetAcceleratorAvailabilityV4CloudProviderAzureAcceleratorAvailabilityGetResponse? Type142 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.ClusterGet>? Type143 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.CreateClusterV4ClustersPostResponse? Type144 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Mystic.NodePool>? Type145 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse? Type146 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mystic.NodePool>? Type119 { get; set; }
     }
 }

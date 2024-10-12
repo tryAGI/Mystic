@@ -11,7 +11,7 @@ namespace Mystic
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse> CreateNodePoolAsync(
+        global::System.Threading.Tasks.Task<string> CreateNodePoolAsync(
             string clusterId,
             global::Mystic.NodePoolCreate request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -26,7 +26,7 @@ namespace Mystic
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.CreateNodePoolV4ClustersClusterIdNodePoolsPostResponse> CreateNodePoolAsync(
+        global::System.Threading.Tasks.Task<string> CreateNodePoolAsync(
             string clusterId,
             global::System.Collections.Generic.IList<global::Mystic.Accelerator> accelerators,
             bool? spot = true,

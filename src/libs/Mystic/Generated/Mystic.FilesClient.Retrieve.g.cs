@@ -28,7 +28,7 @@ namespace Mystic
         /// <param name="fileId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.RetrieveV4FilesFileIdGetResponse> RetrieveAsync(
+        public async global::System.Threading.Tasks.Task<string> RetrieveAsync(
             string fileId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -102,9 +102,7 @@ namespace Mystic
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.RetrieveV4FilesFileIdGetResponse), JsonSerializerContext) as global::Mystic.RetrieveV4FilesFileIdGetResponse ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
     }
 }

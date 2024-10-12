@@ -21,7 +21,7 @@ namespace Mystic
         /// <param name="intervalValue"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.TopPipelinesUsageV4MetricsTopPipelinesUsageGetResponse> TopPipelinesUsageAsync(
+        global::System.Threading.Tasks.Task<string> TopPipelinesUsageAsync(
             global::System.DateTime start,
             global::System.DateTime end,
             global::Mystic.DurationUnit intervalUnit,
