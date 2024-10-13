@@ -124,7 +124,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.PaginatedTeamInviteGet), JsonSerializerContext) as global::Mystic.PaginatedTeamInviteGet ??
+                global::Mystic.PaginatedTeamInviteGet.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -87,7 +87,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.TokenGet), JsonSerializerContext) as global::Mystic.TokenGet ??
+                global::Mystic.TokenGet.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

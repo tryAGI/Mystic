@@ -103,7 +103,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.ClusterRunResult), JsonSerializerContext) as global::Mystic.ClusterRunResult ??
+                global::Mystic.ClusterRunResult.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

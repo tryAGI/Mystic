@@ -133,7 +133,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.PaginatedScalingConfigGetWithPipelineCount), JsonSerializerContext) as global::Mystic.PaginatedScalingConfigGetWithPipelineCount ??
+                global::Mystic.PaginatedScalingConfigGetWithPipelineCount.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }
