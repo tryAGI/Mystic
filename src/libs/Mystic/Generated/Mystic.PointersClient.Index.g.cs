@@ -134,7 +134,7 @@ namespace Mystic
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::Mystic.PaginatedPointerGet), JsonSerializerContext) as global::Mystic.PaginatedPointerGet ??
+                global::Mystic.PaginatedPointerGet.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }
