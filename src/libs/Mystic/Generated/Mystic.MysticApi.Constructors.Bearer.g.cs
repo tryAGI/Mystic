@@ -5,18 +5,19 @@ namespace Mystic
 {
     public sealed partial class MysticApi
     {
-        /// <inheritdoc cref="MysticApi(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Mystic.EndPointAuthorization}?)"/>
+        /// <inheritdoc cref="MysticApi(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Mystic.EndPointAuthorization}?, bool)"/>
         public MysticApi(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>? authorizations = null) : this(httpClient, baseUri, authorizations)
+            global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(httpClient, baseUri, authorizations, disposeHttpClient)
         {
-            Authorizing(_httpClient, ref apiKey);
+            Authorizing(HttpClient, ref apiKey);
 
             AuthorizeUsingBearer(apiKey);
 
-            Authorized(_httpClient);
+            Authorized(HttpClient);
         }
 
         partial void Authorizing(
