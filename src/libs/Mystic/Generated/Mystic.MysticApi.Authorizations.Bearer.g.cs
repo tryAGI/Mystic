@@ -14,8 +14,8 @@ namespace Mystic
         {
             apiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
 
-            _authorizations.Clear();
-            _authorizations.Add(new global::Mystic.EndPointAuthorization
+            Authorizations.Clear();
+            Authorizations.Add(new global::Mystic.EndPointAuthorization
             {
                 Type = "Http",
                 Location = "Header",
