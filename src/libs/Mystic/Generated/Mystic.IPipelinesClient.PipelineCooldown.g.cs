@@ -35,7 +35,7 @@ namespace Mystic
             string pipelineIdOrPointer,
             string? pipelineId = default,
             string? pointer = default,
-            int? duration = 1800,
+            int? duration = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

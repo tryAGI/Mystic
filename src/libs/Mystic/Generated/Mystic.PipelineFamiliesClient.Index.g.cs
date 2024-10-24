@@ -62,9 +62,9 @@ namespace Mystic
             string? teamId = default,
             global::Mystic.AllOf<global::Mystic.OrderBy?>? orderBy = default,
             string? search = default,
-            bool? includeAllRun = false,
-            int? skip = 0,
-            int? limit = 20,
+            bool? includeAllRun = default,
+            int? skip = default,
+            int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

@@ -53,7 +53,7 @@ namespace Mystic
             global::System.DateTime end,
             global::Mystic.DurationUnit intervalUnit,
             int intervalValue,
-            int? numPipelines = 20,
+            int? numPipelines = default,
             string? clusterId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
