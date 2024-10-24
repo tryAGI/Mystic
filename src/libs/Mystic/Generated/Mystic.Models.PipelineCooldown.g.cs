@@ -12,7 +12,7 @@ namespace Mystic
         /// Default Value: 1800
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
-        public int? Duration { get; set; } = 1800;
+        public int? Duration { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

@@ -36,8 +36,8 @@ namespace Mystic
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PaginatedGetMetaAndPointers> ListPipelinesByFamilyAsync(
             string pipelineFamilyName,
-            int? skip = 0,
-            int? limit = 20,
+            int? skip = default,
+            int? limit = default,
             string? orderBy = default,
             bool? @public = default,
             global::Mystic.AllOf<global::Mystic.Accelerator?>? hardware = default,

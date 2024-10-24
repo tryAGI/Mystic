@@ -131,7 +131,7 @@ namespace Mystic
         public async global::System.Threading.Tasks.Task<string> CreateNodePoolAsync(
             string clusterId,
             global::System.Collections.Generic.IList<global::Mystic.Accelerator> accelerators,
-            bool? spot = true,
+            bool? spot = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Mystic.NodePoolCreate
