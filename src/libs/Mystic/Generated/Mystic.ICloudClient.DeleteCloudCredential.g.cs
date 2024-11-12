@@ -9,8 +9,8 @@ namespace Mystic
         /// </summary>
         /// <param name="credentialId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> DeleteCloudCredentialAsync(
+        /// <exception cref="global::Mystic.ApiException"></exception>
+        global::System.Threading.Tasks.Task DeleteCloudCredentialAsync(
             string credentialId,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

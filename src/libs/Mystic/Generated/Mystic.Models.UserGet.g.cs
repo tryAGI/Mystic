@@ -96,91 +96,58 @@ namespace Mystic
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="UserGet" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="company"></param>
+        /// <param name="jobTitle"></param>
+        /// <param name="avatarColour"></param>
+        /// <param name="showTutorial"></param>
+        /// <param name="email"></param>
+        /// <param name="username"></param>
+        /// <param name="id"></param>
+        /// <param name="hasPassword"></param>
+        /// <param name="roles"></param>
+        /// <param name="teams"></param>
+        /// <param name="selectedTeam"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public UserGet(
+            string email,
+            string username,
+            string id,
+            bool hasPassword,
+            string? firstname,
+            string? lastname,
+            string? company,
+            string? jobTitle,
+            string? avatarColour,
+            bool? showTutorial,
+            global::System.Collections.Generic.IList<string>? roles,
+            global::System.Collections.Generic.IList<global::Mystic.UserTeam>? teams,
+            string? selectedTeam)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Email = email ?? throw new global::System.ArgumentNullException(nameof(email));
+            this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.HasPassword = hasPassword;
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Company = company;
+            this.JobTitle = jobTitle;
+            this.AvatarColour = avatarColour;
+            this.ShowTutorial = showTutorial;
+            this.Roles = roles;
+            this.Teams = teams;
+            this.SelectedTeam = selectedTeam;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="UserGet" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public UserGet()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::Mystic.UserGet? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::Mystic.UserGet),
-                jsonSerializerContext) as global::Mystic.UserGet;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::Mystic.UserGet? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Mystic.UserGet>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Mystic.UserGet?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::Mystic.UserGet),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Mystic.UserGet;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::Mystic.UserGet?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Mystic.UserGet?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

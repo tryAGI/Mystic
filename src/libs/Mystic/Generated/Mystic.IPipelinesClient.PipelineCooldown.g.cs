@@ -12,8 +12,8 @@ namespace Mystic
         /// <param name="pointer"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> PipelineCooldownAsync(
+        /// <exception cref="global::Mystic.ApiException"></exception>
+        global::System.Threading.Tasks.Task PipelineCooldownAsync(
             string pipelineIdOrPointer,
             global::Mystic.PipelineCooldown request,
             string? pipelineId = default,
@@ -31,7 +31,7 @@ namespace Mystic
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> PipelineCooldownAsync(
+        global::System.Threading.Tasks.Task PipelineCooldownAsync(
             string pipelineIdOrPointer,
             string? pipelineId = default,
             string? pointer = default,

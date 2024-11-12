@@ -22,11 +22,6 @@ namespace Mystic
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessPipelineWarmupResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Pipeline Warmup
         /// </summary>
@@ -35,8 +30,8 @@ namespace Mystic
         /// <param name="pointer"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> PipelineWarmupAsync(
+        /// <exception cref="global::Mystic.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task PipelineWarmupAsync(
             string pipelineIdOrPointer,
             global::Mystic.PipelineWarmup request,
             string? pipelineId = default,
@@ -110,30 +105,23 @@ namespace Mystic
             ProcessPipelineWarmupResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessPipelineWarmupResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
             try
             {
                 __response.EnsureSuccessStatusCode();
             }
             catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                throw new global::Mystic.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-
-            return
-                global::Mystic.HTTPValidationError.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
         /// <summary>
@@ -148,7 +136,7 @@ namespace Mystic
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> PipelineWarmupAsync(
+        public async global::System.Threading.Tasks.Task PipelineWarmupAsync(
             string pipelineIdOrPointer,
             int minimumNodes,
             string? pipelineId = default,
@@ -162,7 +150,7 @@ namespace Mystic
                 Duration = duration,
             };
 
-            return await PipelineWarmupAsync(
+            await PipelineWarmupAsync(
                 pipelineIdOrPointer: pipelineIdOrPointer,
                 pipelineId: pipelineId,
                 pointer: pointer,

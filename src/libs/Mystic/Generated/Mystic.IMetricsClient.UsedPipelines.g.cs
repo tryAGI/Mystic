@@ -18,7 +18,7 @@ namespace Mystic
         /// </param>
         /// <param name="orderBy"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::Mystic.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Mystic.PaginatedPipelineMetrics> UsedPipelinesAsync(
             string? search = default,
             int? skip = default,
