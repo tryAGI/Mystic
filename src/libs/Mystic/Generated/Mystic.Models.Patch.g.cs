@@ -92,91 +92,58 @@ namespace Mystic
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Patch" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="public"></param>
+        /// <param name="description"></param>
+        /// <param name="websiteUrl"></param>
+        /// <param name="repositoryUrl"></param>
+        /// <param name="paperUrl"></param>
+        /// <param name="licenseUrl"></param>
+        /// <param name="imageUrl"></param>
+        /// <param name="readme"></param>
+        /// <param name="inputVariables"></param>
+        /// <param name="outputVariables"></param>
+        /// <param name="accelerators"></param>
+        /// <param name="extras"></param>
+        /// <param name="scalingConfig"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Patch(
+            bool? @public,
+            string? description,
+            string? websiteUrl,
+            string? repositoryUrl,
+            string? paperUrl,
+            string? licenseUrl,
+            string? imageUrl,
+            string? readme,
+            global::System.Collections.Generic.IList<global::Mystic.IOVariable>? inputVariables,
+            global::System.Collections.Generic.IList<global::Mystic.IOVariable>? outputVariables,
+            global::System.Collections.Generic.IList<global::Mystic.Accelerator>? accelerators,
+            object? extras,
+            string? scalingConfig)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Public = @public;
+            this.Description = description;
+            this.WebsiteUrl = websiteUrl;
+            this.RepositoryUrl = repositoryUrl;
+            this.PaperUrl = paperUrl;
+            this.LicenseUrl = licenseUrl;
+            this.ImageUrl = imageUrl;
+            this.Readme = readme;
+            this.InputVariables = inputVariables;
+            this.OutputVariables = outputVariables;
+            this.Accelerators = accelerators;
+            this.Extras = extras;
+            this.ScalingConfig = scalingConfig;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Patch" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Patch()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::Mystic.Patch? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::Mystic.Patch),
-                jsonSerializerContext) as global::Mystic.Patch;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::Mystic.Patch? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Mystic.Patch>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Mystic.Patch?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::Mystic.Patch),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Mystic.Patch;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::Mystic.Patch?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Mystic.Patch?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

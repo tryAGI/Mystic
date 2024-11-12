@@ -25,6 +25,11 @@ namespace Mystic
         /// <inheritdoc/>
         public global::System.Collections.Generic.List<global::Mystic.EndPointAuthorization> Authorizations { get; }
 
+        /// <inheritdoc/>
+        public bool ReadResponseAsString { get; set; }
+#if DEBUG
+            = true;
+#endif
         /// <summary>
         /// 
         /// </summary>
@@ -36,6 +41,7 @@ namespace Mystic
         /// </summary>
         public PipelinesClient Pipelines => new PipelinesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -44,6 +50,7 @@ namespace Mystic
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -52,6 +59,7 @@ namespace Mystic
         /// </summary>
         public TokensClient Tokens => new TokensClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -60,6 +68,7 @@ namespace Mystic
         /// </summary>
         public RunsClient Runs => new RunsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -68,6 +77,7 @@ namespace Mystic
         /// </summary>
         public BillingClient Billing => new BillingClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -76,6 +86,7 @@ namespace Mystic
         /// </summary>
         public PointersClient Pointers => new PointersClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -84,6 +95,7 @@ namespace Mystic
         /// </summary>
         public PipelineFamiliesClient PipelineFamilies => new PipelineFamiliesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -92,6 +104,7 @@ namespace Mystic
         /// </summary>
         public FilesClient Files => new FilesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -100,6 +113,7 @@ namespace Mystic
         /// </summary>
         public MetricsClient Metrics => new MetricsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -108,6 +122,7 @@ namespace Mystic
         /// </summary>
         public LogsClient Logs => new LogsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -116,6 +131,7 @@ namespace Mystic
         /// </summary>
         public CloudClient Cloud => new CloudClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -124,6 +140,7 @@ namespace Mystic
         /// </summary>
         public CredentialsClient Credentials => new CredentialsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -132,6 +149,7 @@ namespace Mystic
         /// </summary>
         public GCPClient GCP => new GCPClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -140,6 +158,7 @@ namespace Mystic
         /// </summary>
         public AWSClient AWS => new AWSClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -148,6 +167,7 @@ namespace Mystic
         /// </summary>
         public AzureClient Azure => new AzureClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -156,6 +176,7 @@ namespace Mystic
         /// </summary>
         public ClusterClient Cluster => new ClusterClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -164,6 +185,7 @@ namespace Mystic
         /// </summary>
         public ResourcesClient Resources => new ResourcesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -172,6 +194,7 @@ namespace Mystic
         /// </summary>
         public ScalingConfigurationsClient ScalingConfigurations => new ScalingConfigurationsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 

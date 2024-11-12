@@ -9,8 +9,8 @@ namespace Mystic
         /// </summary>
         /// <param name="pointer"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Mystic.HTTPValidationError> DeleteAsync(
+        /// <exception cref="global::Mystic.ApiException"></exception>
+        global::System.Threading.Tasks.Task DeleteAsync(
             string pointer,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
