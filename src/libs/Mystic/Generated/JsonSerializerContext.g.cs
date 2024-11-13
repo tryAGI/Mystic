@@ -31,8 +31,9 @@ namespace Mystic
             typeof(global::Mystic.JsonConverters.OrderByNullableJsonConverter),
             typeof(global::Mystic.JsonConverters.ScalingConfigTypeJsonConverter),
             typeof(global::Mystic.JsonConverters.ScalingConfigTypeNullableJsonConverter),
-            typeof(global::Mystic.JsonConverters.AnyOfJsonConverterFactory2),
-            typeof(global::Mystic.JsonConverters.AllOfJsonConverterFactory1),
+            typeof(global::Mystic.JsonConverters.AnyOfJsonConverter<string, int?>),
+            typeof(global::Mystic.JsonConverters.AllOfJsonConverter<global::Mystic.Accelerator?>),
+            typeof(global::Mystic.JsonConverters.AllOfJsonConverter<global::Mystic.OrderBy?>),
         })]
 
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mystic.JsonSerializerContextTypes))]
