@@ -34,6 +34,7 @@ namespace Mystic
             typeof(global::Mystic.JsonConverters.AnyOfJsonConverter<string, int?>),
             typeof(global::Mystic.JsonConverters.AllOfJsonConverter<global::Mystic.Accelerator?>),
             typeof(global::Mystic.JsonConverters.AllOfJsonConverter<global::Mystic.OrderBy?>),
+            typeof(global::Mystic.JsonConverters.UnixTimestampJsonConverter),
         })]
 
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mystic.JsonSerializerContextTypes))]
